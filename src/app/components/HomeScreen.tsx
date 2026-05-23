@@ -78,7 +78,6 @@ export function HomeScreen() {
             {[
               { icon: <Zap size={18} />, label: "IA em Tempo Real" },
               { icon: <Activity size={18} />, label: "Feedback Visual" },
-              { icon: <Mic size={18} />, label: "Comandos de Voz" },
             ].map((item) => (
               <div
                 key={item.label}

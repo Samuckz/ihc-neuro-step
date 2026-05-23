@@ -51,7 +51,7 @@ export function UserConfigScreen() {
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/ihc-neuro-step")}
             className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#1E293B] border border-[#334155] text-[#94A3B8] hover:text-white hover:border-[#475569] transition-all cursor-pointer"
           >
             <ChevronLeft size={24} />
@@ -197,19 +197,6 @@ export function UserConfigScreen() {
 
         {/* Bottom actions */}
         <div className="flex items-end justify-between mt-10 max-w-2xl mx-auto w-full gap-6">
-          {/* Usar minha ficha */}
-          <motion.button
-            whileTap={{ scale: 0.96 }}
-            onClick={() => setShowModal(true)}
-            className="flex items-center gap-3 px-8 py-5 rounded-2xl border-2 border-dashed border-[#334155] text-[#64748B] hover:border-[#3B82F6] hover:text-[#3B82F6] transition-all cursor-pointer"
-          >
-            <FileText size={28} />
-            <span className="text-lg">Usar minha ficha</span>
-            {fichaLoaded && (
-              <CheckCircle2 size={22} className="text-[#22C55E]" />
-            )}
-          </motion.button>
-
           {/* Continuar */}
           <GlowButton
             color="blue"

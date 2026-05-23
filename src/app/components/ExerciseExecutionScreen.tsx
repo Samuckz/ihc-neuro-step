@@ -440,16 +440,6 @@ export function ExerciseExecutionScreen() {
             ))}
           </div>
 
-          {/* Voice guidance */}
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-[#1E293B] border border-[#334155]">
-            <motion.div
-              animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <Volume2 size={18} className="text-[#3B82F6]" />
-            </motion.div>
-            <span className="text-[#64748B] text-sm">Guia de voz ativo</span>
-          </div>
         </div>
 
         {/* Pause overlay */}

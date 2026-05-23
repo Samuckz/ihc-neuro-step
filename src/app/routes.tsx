@@ -7,7 +7,7 @@ import { ExerciseExecutionScreen } from "./components/ExerciseExecutionScreen";
 import { ResultsScreen } from "./components/ResultsScreen";
 
 export const router = createBrowserRouter([
-  { path: "/", Component: HomeScreen },
+  { path: "/ihc-neuro-step", Component: HomeScreen },
   { path: "/config", Component: UserConfigScreen },
   { path: "/training-type", Component: TrainingTypeScreen },
   { path: "/exercises", Component: ExerciseSelectionScreen },
