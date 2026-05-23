@@ -24,7 +24,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/ihc-neuro-step"
+  base: "/ihc-neuro-step",
   resolve: {
     alias: {
       // Alias @ to the src directory
