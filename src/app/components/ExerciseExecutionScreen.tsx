@@ -241,7 +241,7 @@ export function ExerciseExecutionScreen() {
   const navigate = useNavigate();
   const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(180); // 3 min
+  const [timeLeft, setTimeLeft] = useState(30); // 30 seconds
   const [feedback, setFeedback] = useState<FeedbackStatus>("idle");
   const [seqIndex, setSeqIndex] = useState(0);
   const [reps, setReps] = useState(0);

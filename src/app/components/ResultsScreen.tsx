@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
-import { Trophy, RotateCcw, Home, TrendingUp, Target, Clock, CheckCircle2 } from "lucide-react";
+import { Trophy, ArrowLeft, Home, TrendingUp, Target, Clock, CheckCircle2 } from "lucide-react";
 import { NeuroStepLayout, GlowButton } from "./NeuroStepLayout";
 import { UserHeader } from "./UserHeader";
 
@@ -18,7 +18,7 @@ interface Metric {
 const METRICS: Metric[] = [
   { label: "Precisão", value: 87, unit: "%", icon: Target, color: "#3B82F6", glow: "rgba(59,130,246,0.4)" },
   { label: "Equilíbrio", value: 92, unit: "%", icon: TrendingUp, color: "#22C55E", glow: "rgba(34,197,94,0.4)" },
-  { label: "Tempo", value: 3, unit: "min", icon: Clock, color: "#F59E0B", glow: "rgba(245,158,11,0.4)" },
+  { label: "Tempo", value: 30, unit: "seg", icon: Clock, color: "#F59E0B", glow: "rgba(245,158,11,0.4)" },
 ];
 
 function RadialProgress({ value, color, glow, size = 120 }: { value: number; color: string; glow: string; size?: number }) {
@@ -153,7 +153,7 @@ export function ResultsScreen() {
           <div className="grid grid-cols-3 gap-6 w-full max-w-2xl mb-10">
             {METRICS.map((m, i) => {
               const Icon = m.icon;
-              const isTime = m.unit === "min";
+              const isTime = m.unit === "min" || m.unit === "seg";
               return (
                 <motion.div
                   key={m.label}
@@ -174,7 +174,7 @@ export function ResultsScreen() {
                     <div className="flex flex-col items-center">
                       <span className="text-4xl text-white" style={{ fontWeight: 700 }}>
                         {m.value}
-                        <span className="text-xl text-[#64748B]">{m.unit}</span>
+                        <span className="text-xl text-[#64748B]"> {m.unit}</span>
                       </span>
                     </div>
                   ) : (
@@ -219,7 +219,7 @@ export function ResultsScreen() {
         >
           {/* Finalizar */}
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/ihc-neuro-step")}
             className="flex-1 flex items-center justify-center gap-3 py-6 rounded-2xl border-2 border-[#334155] text-[#94A3B8] hover:border-[#475569] hover:text-white transition-all cursor-pointer text-xl"
           >
             <Home size={26} />
@@ -232,20 +232,12 @@ export function ResultsScreen() {
             onClick={() => navigate("/exercises")}
             className="flex-1 flex items-center justify-center gap-3 py-6 text-xl"
           >
-            <RotateCcw size={26} />
-            Próximo Exercício
+            <ArrowLeft size={26} />
+            Outro exercício
           </GlowButton>
         </motion.div>
 
-        {/* Score summary at bottom */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-8 text-[#475569] text-sm text-center"
-        >
-          Pontuação média: <span className="text-white">{avg}%</span> · Sessão salva no seu perfil
-        </motion.p>
+        
       </div>
     </NeuroStepLayout>
   );
