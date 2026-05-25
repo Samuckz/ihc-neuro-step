@@ -196,12 +196,12 @@ export function UserConfigScreen() {
         </div>
 
         {/* Bottom actions */}
-        <div className="flex items-end justify-between mt-10 max-w-2xl mx-auto w-full gap-6">
+        <div className="flex items-end justify-end mt-10 max-w-2xl mx-auto w-full gap-6">
           {/* Continuar */}
           <GlowButton
             color="blue"
             onClick={() => navigate("/training-type")}
-            className="flex items-center gap-3 px-12 py-5 text-2xl"
+            className="flex items-end gap-3 px-12 py-5 text-2xl"
           >
             Continuar
             <ArrowRight size={28} />

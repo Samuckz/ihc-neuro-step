@@ -27,16 +27,6 @@ const EXERCISES = [
     description: "Força e estabilidade",
   },
   {
-    id: "marcha",
-    name: "Marcha Controlada",
-    duration: "4 min",
-    intensity: "Leve",
-    stars: 1,
-    emoji: "🚶",
-    color: "#F59E0B",
-    description: "Coordenação e ritmo",
-  },
-  {
     id: "lateral",
     name: "Passo Lateral",
     duration: "4 min",
@@ -55,16 +45,6 @@ const EXERCISES = [
     emoji: "⚡",
     color: "#EF4444",
     description: "Potência e reatividade",
-  },
-  {
-    id: "balance",
-    name: "Balance Board",
-    duration: "5 min",
-    intensity: "Moderado",
-    stars: 2,
-    emoji: "🎯",
-    color: "#22C55E",
-    description: "Propriocepção total",
   },
 ];
 
